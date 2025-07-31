@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(222, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(222, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32.6%, 17.5%);
+  --input: hsl(217, 32.6%, 17.5%);
+  --primary: hsl(263, 70%, 50%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(217, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(263, 70%, 50%);
+  --radius: 0.75rem;
+  
+  /* Custom sleep-themed colors */
+  --purple-gradient-start: hsl(263, 70%, 50%);
+  --purple-gradient-end: hsl(221, 83%, 53%);
+  --blue-gradient-start: hsl(221, 83%, 53%);
+  --blue-gradient-end: hsl(212, 100%, 50%);
+  --yellow-gradient-start: hsl(45, 93%, 47%);
+  --yellow-gradient-end: hsl(32, 95%, 44%);
+  --sleep-purple: hsl(263, 70%, 50%);
+  --sleep-blue: hsl(221, 83%, 53%);
+  --sleep-indigo: hsl(243, 75%, 59%);
+  --sleep-violet: hsl(258, 90%, 66%);
+  --sleep-yellow: hsl(45, 93%, 47%);
+  --sleep-orange: hsl(32, 95%, 44%);
+  --sleep-amber: hsl(43, 96%, 56%);
+}
+
+.dark {
+  --background: hsl(222, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(222, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32.6%, 17.5%);
+  --input: hsl(217, 32.6%, 17.5%);
+  --primary: hsl(263, 70%, 50%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(217, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(263, 70%, 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased text-foreground min-h-screen;
+    background: linear-gradient(135deg, 
+      hsl(222, 84%, 4.9%) 0%, 
+      hsl(263, 70%, 15%) 25%, 
+      hsl(221, 83%, 20%) 50%, 
+      hsl(243, 75%, 15%) 75%, 
+      hsl(222, 84%, 4.9%) 100%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
+
+@keyframes fadeIn {
+  0% { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0px); 
+  }
+}
+
+/* Custom gradient backgrounds */
+.bg-purple-gradient {
+  background: linear-gradient(135deg, var(--purple-gradient-start), var(--purple-gradient-end));
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+}
+
+.bg-yellow-gradient {
+  background: linear-gradient(135deg, var(--yellow-gradient-start), var(--yellow-gradient-end));
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Rainbow gradient for special elements */
+.bg-rainbow-gradient {
+  background: linear-gradient(135deg, 
+    hsl(263, 70%, 50%) 0%,
+    hsl(221, 83%, 53%) 20%,
+    hsl(212, 100%, 50%) 40%,
+    hsl(45, 93%, 47%) 60%,
+    hsl(32, 95%, 44%) 80%,
+    hsl(263, 70%, 50%) 100%);
+  box-shadow: 0 4px 25px rgba(139, 92, 246, 0.4);
+}
+
+/* Animated gradient background */
+.bg-animated-gradient {
+  background: linear-gradient(-45deg, 
+    hsl(263, 70%, 50%), 
+    hsl(221, 83%, 53%), 
+    hsl(212, 100%, 50%), 
+    hsl(45, 93%, 47%));
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sleep cycle colors */
+.bg-sleep-purple { background-color: var(--sleep-purple); }
+.bg-sleep-blue { background-color: var(--sleep-blue); }
+.bg-sleep-indigo { background-color: var(--sleep-indigo); }
+.bg-sleep-violet { background-color: var(--sleep-violet); }
+.bg-sleep-yellow { background-color: var(--sleep-yellow); }
+.bg-sleep-orange { background-color: var(--sleep-orange); }
+.bg-sleep-amber { background-color: var(--sleep-amber); }
+
+.border-sleep-purple { border-color: var(--sleep-purple); }
+.border-sleep-blue { border-color: var(--sleep-blue); }
+.border-sleep-indigo { border-color: var(--sleep-indigo); }
+.border-sleep-violet { border-color: var(--sleep-violet); }
+.border-sleep-yellow { border-color: var(--sleep-yellow); }
+.border-sleep-orange { border-color: var(--sleep-orange); }
+.border-sleep-amber { border-color: var(--sleep-amber); }
+
+/* Mobile optimization and touch-friendly design */
+@media screen and (max-width: 768px) {
+  /* Ensure touch targets are at least 44px for accessibility */
+  button, .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent zoom on mobile input focus */
+  input, select, textarea {
+    font-size: 16px;
+  }
+  
+  /* Optimize card layouts for mobile */
+  .sleep-result-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  
+  /* Better mobile spacing */
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Reduce animation intensity on mobile for performance */
+  .animate-float {
+    animation-duration: 4s;
+  }
+}
+
+/* Improve touch scrolling on all devices */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Enhance button hover states for desktop and touch states for mobile */
+@media (hover: hover) {
+  button:hover {
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (hover: none) {
+  button:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease-in-out;
+  }
+}
