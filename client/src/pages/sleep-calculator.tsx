@@ -217,44 +217,8 @@ export default function SleepCalculator() {
 
         {/* Main Calculator Container */}
         <div className="flex-1 max-w-4xl mx-auto w-full">
-          {/* Google AdSense Banner */}
-          {/* 
-            INSTRUCTIONS FOR GOOGLE ADSENSE INTEGRATION:
-            
-            1. Sign up for Google AdSense at https://www.google.com/adsense/
-            2. Add your domain to AdSense and get approved
-            3. Create an ad unit in AdSense dashboard
-            4. Replace this entire section with the AdSense code provided by Google
-            
-            Example AdSense code structure for 728x90:
-            <ins className="adsbygoogle"
-                 style={{display:"inline-block", width:"728px", height:"90px"}}
-                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                 data-ad-slot="XXXXXXXXXX"
-                 data-ad-format="leaderboard"></ins>
-            
-            Don't forget to add the AdSense script to your HTML head:
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"></script>
-          */}
-          <div className="mb-8 flex justify-center px-4">
-            <Card className="bg-gradient-to-r from-slate-800/40 via-gray-800/40 to-slate-800/40 backdrop-blur-sm border border-gray-600/30 shadow-xl">
-              <CardContent className="p-4">
-                <div className="text-center">
-                  <div className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 rounded-lg border-2 border-dashed border-gray-500/40 p-4 flex items-center justify-center" style={{width: '728px', height: '90px', maxWidth: '100%'}}>
-                    <div className="flex items-center space-x-3">
-                      <svg className="w-8 h-8 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                      </svg>
-                      <div className="text-center">
-                        <p className="text-gray-400 font-medium text-sm">Google AdSense</p>
-                        <p className="text-gray-500 text-xs">728×90 Leaderboard Banner</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          {/* AdSense integration space - placeholder removed to comply with Google AdSense policies.
+              To add ads later: ensure proper AdSense approval and only display ads with actual publisher content */}
 
           {/* Calculator Mode Toggle */}
           <div className="flex justify-center mb-8 px-4">
@@ -536,6 +500,128 @@ export default function SleepCalculator() {
                   which can leave you feeling groggy and tired. This calculator adds 15 minutes for the average time it takes to fall asleep, 
                   ensuring you complete full cycles and wake up feeling refreshed.
                 </p>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* SEO Content Section */}
+        <section className="mt-16 max-w-4xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Benefits Section */}
+            <Card className="bg-gradient-to-br from-slate-800/40 to-purple-900/20 backdrop-blur-sm border border-purple-400/20">
+              <CardContent className="p-6">
+                <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+                  <Lightbulb className="mr-3 text-yellow-400" size={24} />
+                  Benefits of Proper Sleep Cycles
+                </h2>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span><strong>Better Sleep Quality:</strong> Wake up during lighter sleep phases for natural awakening</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span><strong>Increased Energy:</strong> Complete sleep cycles prevent grogginess and fatigue</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span><strong>Improved Focus:</strong> Optimal sleep timing enhances cognitive performance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span><strong>Better Mood:</strong> Proper sleep cycles regulate hormones and emotional balance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-400 mr-2">✓</span>
+                    <span><strong>Health Benefits:</strong> Consistent sleep patterns support immune system and recovery</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* How It Works Section */}
+            <Card className="bg-gradient-to-br from-slate-800/40 to-blue-900/20 backdrop-blur-sm border border-blue-400/20">
+              <CardContent className="p-6">
+                <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+                  <Clock className="mr-3 text-blue-400" size={24} />
+                  How Sleep Cycles Work
+                </h2>
+                <div className="space-y-4 text-gray-300">
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">90-Minute Cycles</h3>
+                    <p className="text-sm">Each sleep cycle lasts approximately 90 minutes and includes light sleep, deep sleep, and REM sleep phases.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">Optimal Timing</h3>
+                    <p className="text-sm">Waking up at the end of a complete cycle (rather than in the middle) helps you feel more refreshed and alert.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">Sleep Duration</h3>
+                    <p className="text-sm">Most adults need 5-6 complete cycles (7.5-9 hours) for optimal rest and recovery.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* FAQ Section */}
+          <Card className="bg-gradient-to-br from-slate-800/40 to-gray-900/20 backdrop-blur-sm border border-gray-400/20 mb-12">
+            <CardContent className="p-6">
+              <h2 className="text-3xl font-bold text-white mb-6 text-center">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">How accurate is the sleep cycle calculator?</h3>
+                  <p className="text-gray-300">Our calculator is based on the scientifically-backed 90-minute sleep cycle average. While individual cycles may vary slightly (80-110 minutes), this provides an excellent starting point for optimizing your sleep schedule.</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">What if I can't fall asleep in 15 minutes?</h3>
+                  <p className="text-gray-300">The calculator includes a 15-minute buffer for falling asleep. If you typically take longer, adjust your bedtime accordingly. Good sleep hygiene practices can help reduce the time it takes to fall asleep.</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">How many sleep cycles do I need?</h3>
+                  <p className="text-gray-300">Most adults need 5-6 complete sleep cycles per night (7.5-9 hours). However, some people function well on 4-5 cycles, while others may need 6-7. Use this calculator to experiment and find what works best for you.</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Can this help with insomnia or sleep disorders?</h3>
+                  <p className="text-gray-300">While this calculator can help optimize your sleep timing, it's not a treatment for sleep disorders. If you have chronic sleep issues, consult with a healthcare professional or sleep specialist.</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Should I use this calculator every night?</h3>
+                  <p className="text-gray-300">Once you find your optimal sleep schedule, try to maintain consistent bedtime and wake-up times. The calculator is great for planning or adjusting your schedule when needed.</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Sleep Tips Section */}
+          <Card className="bg-gradient-to-br from-slate-800/40 to-green-900/20 backdrop-blur-sm border border-green-400/20 mb-12">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+                <Info className="mr-3 text-green-400" size={24} />
+                Sleep Optimization Tips
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="font-semibold text-white mb-3">Before Bedtime</h3>
+                  <ul className="space-y-2 text-gray-300 text-sm">
+                    <li>• Avoid screens 1 hour before bed</li>
+                    <li>• Keep bedroom cool (65-68°F)</li>
+                    <li>• Use blackout curtains or eye mask</li>
+                    <li>• Try relaxation techniques</li>
+                    <li>• Avoid caffeine after 2 PM</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-white mb-3">Sleep Environment</h3>
+                  <ul className="space-y-2 text-gray-300 text-sm">
+                    <li>• Comfortable mattress and pillows</li>
+                    <li>• Quiet environment or white noise</li>
+                    <li>• Remove electronic devices</li>
+                    <li>• Use bedroom only for sleep</li>
+                    <li>• Maintain consistent temperature</li>
+                  </ul>
+                </div>
               </div>
             </CardContent>
           </Card>

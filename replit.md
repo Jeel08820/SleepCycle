@@ -51,14 +51,14 @@ The application follows a monorepo structure with clear separation between clien
 4. **Results Display**: Visual cards showing optimal sleep times with cycle information
 5. **Database Integration**: All calculations automatically saved to PostgreSQL
 6. **Sleep Tips System**: Database-backed tips with categorization and management
-7. **Monetization**: Google AdSense banner placeholder for advertisement integration
+7. **AdSense Compliance**: Removed mock ad placeholders to comply with Google AdSense policies
 
 ### Current Data Storage
 - **PostgreSQL Database**: Fully integrated with Drizzle ORM  
 - **Sleep Calculations Tracking**: All calculations automatically saved to database
 - **Sleep Tips Management**: Database-backed tips system with categories
 - **User Data**: Support for user management and sleep calculation history
-- **Monetization Ready**: Google AdSense banner placeholder with integration instructions
+- **AdSense Compliant**: Removed placeholder ads to comply with Google AdSense policies
 
 ## External Dependencies
 
