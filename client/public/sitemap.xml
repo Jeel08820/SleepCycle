@@ -28,12 +28,5 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- API Documentation (if public) -->
-  <url>
-    <loc>https://sleepcycle.app/api</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
   
 </urlset>
