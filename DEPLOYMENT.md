@@ -19,16 +19,7 @@ vercel
 
 Or use the [Vercel Dashboard](https://vercel.com) to connect your GitHub repository.
 
-### 2. Netlify (Free Tier)
-
-**Cost:** Free for personal projects
-**Features:** Continuous deployment, form handling, edge functions
-
-1. Push your code to GitHub
-2. Connect repository at [Netlify](https://netlify.com)
-3. Build settings are automatically configured via `netlify.toml`
-
-### 3. Railway (Low Cost)
+### 2. Railway (Low Cost)
 
 **Cost:** $5/month for hobby plan
 **Features:** Persistent storage, custom domains, automatic scaling
@@ -42,18 +33,7 @@ railway login
 railway deploy
 ```
 
-### 4. Render (Free Tier Available)
-
-**Cost:** Free tier available, paid plans start at $7/month
-**Features:** Auto-deploy from Git, custom domains, SSL
-
-1. Connect your GitHub repository at [Render](https://render.com)
-2. Choose "Web Service"
-3. Use these settings:
-   - Build Command: `npm run build`
-   - Start Command: `npm start`
-
-### 5. DigitalOcean App Platform
+### 3. DigitalOcean App Platform
 
 **Cost:** Starting at $5/month
 **Features:** Managed infrastructure, auto-scaling, monitoring
@@ -91,7 +71,7 @@ The app works without environment variables, but you can set:
 
 ## 💡 Cost Optimization Tips
 
-1. **Use Free Tiers First:** Vercel and Netlify offer generous free tiers
+1. **Use Free Tiers First:** Vercel offers generous free tier
 2. **Static Hosting:** Consider converting to a pure client-side app for even cheaper hosting
 3. **CDN Benefits:** Most platforms include global CDN for faster loading
 4. **Auto-scaling:** Serverless functions scale to zero when not in use
@@ -111,7 +91,7 @@ The app works without environment variables, but you can set:
 ### API Routes Not Working
 - Check platform-specific routing configuration
 - Ensure API routes are properly configured in deployment settings
-- Verify serverless function setup for platforms like Vercel/Netlify
+- Verify serverless function setup for platforms like Vercel
 
 ## 📞 Support
 
@@ -122,4 +102,4 @@ For deployment issues:
 
 ---
 
-**Recommended for beginners:** Start with Vercel or Netlify for the easiest deployment experience.
+**Recommended for beginners:** Start with Vercel for the easiest deployment experience.
