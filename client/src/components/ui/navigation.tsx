@@ -55,13 +55,13 @@ export function FooterNavigation() {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           <p className="text-gray-400 text-sm">
-            <a href="/terms-of-service" className="text-purple-400 hover:text-purple-300 transition-colors mr-4">
+            <Link href="/terms-of-service" className="text-purple-400 hover:text-purple-300 transition-colors mr-4">
               Terms
-            </a>
+            </Link>
             and
-            <a href="/privacy-policy" className="text-purple-400 hover:text-purple-300 transition-colors ml-4">
+            <Link href="/privacy-policy" className="text-purple-400 hover:text-purple-300 transition-colors ml-4">
               Privacy Policy
-            </a>
+            </Link>
           </p>
         </div>
       </div>
