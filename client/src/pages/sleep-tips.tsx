@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import { FooterNavigation } from "@/components/ui/navigation";
 import { Moon, Clock, Home, Lightbulb, Calendar, Thermometer } from "lucide-react";
 
 interface SleepTip {
@@ -261,14 +262,7 @@ export default function SleepTips() {
         </div>
 
         {/* Footer */}
-        <footer className="mt-auto py-8 px-4 border-t border-gray-700/50">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gray-400 text-sm">
-              These tips are for educational purposes only and should not replace professional medical advice. 
-              Consult with a healthcare provider for persistent sleep issues.
-            </p>
-          </div>
-        </footer>
+        <FooterNavigation />
       </div>
     </div>
   );

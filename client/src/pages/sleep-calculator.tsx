@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import TimePicker from "@/components/ui/time-picker";
 import SleepResultCard from "@/components/ui/sleep-result-card";
+import { FooterNavigation } from "@/components/ui/navigation";
 import { Moon, Sun, Bed, Calculator, Clock, Info, Lightbulb } from "lucide-react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -628,56 +629,7 @@ export default function SleepCalculator() {
         </section>
 
         {/* Footer */}
-        <footer className="mt-16 border-t border-gray-700 pt-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <p className="text-sm text-gray-400">Sleep cycles are approximately 90 minutes long. This calculator helps you wake up at the end of a cycle for better rest.</p>
-            </div>
-            
-            <div className="bg-gray-800/50 rounded-lg p-6 text-sm text-gray-300 space-y-6">
-              <div className="text-center">
-                <h3 className="text-lg font-semibold text-white mb-4">Terms and Privacy Policy</h3>
-                <p className="text-gray-400">
-                  This agreement describes the conditions and rules under which our company ("our company", "we") offers you its services.
-                </p>
-                <p className="text-gray-400 mt-2">
-                  This agreement will be governed by applicable laws, without reference to conflict of laws principles. 
-                  You agree that any litigation relating to this agreement may only be brought in, and shall be subject to the jurisdiction of, any applicable Court.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-white mb-3">Terms</h4>
-                <p className="mb-3">By using our services, you agree to observe all of the following conditions and rules:</p>
-                <ol className="list-decimal list-inside space-y-2 text-gray-400">
-                  <li>You acknowledge that using this service is entirely at your own discretion and risk.</li>
-                  <li>You are solely responsible for all information and data you provide or transmit through our platform.</li>
-                  <li>You must not upload, share, or transmit any content that violates applicable laws or regulations.</li>
-                  <li>Integration of our service into other applications or platforms is strictly prohibited without prior authorization.</li>
-                  <li>This service may be used for both personal and commercial purposes within the scope of these terms.</li>
-                  <li>We retain the right to modify, suspend, or discontinue any aspect of our service at our sole discretion.</li>
-                  <li>These terms may be updated or modified without prior notification to users.</li>
-                  <li>This service is provided "as is" without any warranties, express or implied.</li>
-                </ol>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-white mb-3">Privacy</h4>
-                <ol className="list-decimal list-inside space-y-2 text-gray-400" start={9}>
-                  <li>In order to improve the quality of our service, we may save and analyze the metadata of your requests.</li>
-                  <li>
-                    Google collects data and uses cookies for ad personalization and measurement for this site. 
-                    <a href="https://policies.google.com/technologies/partner-sites" className="text-blue-400 hover:text-blue-300 underline ml-1" target="_blank" rel="noopener noreferrer">
-                      Learn how Google collects and uses data
-                    </a>. 
-                    You can turn off ad personalization at any time in your Google account settings. 
-                    Also, we use cookies for statistical purposes. By using this site, you consent to our use of cookies.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <FooterNavigation />
       </div>
     </div>
   );
