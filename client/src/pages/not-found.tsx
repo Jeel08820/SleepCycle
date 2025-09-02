@@ -1,6 +1,6 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { AlertCircle, Home, Calculator, Moon, ArrowLeft } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { AlertCircle, Home, Calculator, Moon, ArrowLeft, BookOpen, Smartphone } from "lucide-react";
 import { Link } from "wouter";
 
 export default function NotFound() {
@@ -112,6 +112,128 @@ export default function NotFound() {
               Use the navigation above or <Link href="/" className="text-purple-400 hover:text-purple-300 underline">return to the homepage</Link> to continue exploring our sleep optimization tools.
             </p>
           </div>
+
+            {/* Sleep Education Resources */}
+            <Card className="bg-slate-800/50 backdrop-blur-sm border-blue-500/20 shadow-2xl">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-white flex items-center gap-3">
+                  <BookOpen className="h-8 w-8 text-blue-400" />
+                  Sleep Education Resources
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <p className="text-gray-300 leading-relaxed">
+                  While you're here, take advantage of our comprehensive sleep education resources. 
+                  Understanding sleep science can help you make better decisions about your health and well-being.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="p-4 bg-blue-500/10 rounded-xl border border-blue-400/20">
+                    <h4 className="font-semibold text-blue-300 mb-3">Sleep Science Fundamentals</h4>
+                    <ul className="text-gray-300 text-sm space-y-2">
+                      <li>• Sleep cycle stages and timing</li>
+                      <li>• Circadian rhythm regulation</li>
+                      <li>• Sleep architecture patterns</li>
+                      <li>• Hormonal sleep regulation</li>
+                      <li>• Sleep quality metrics</li>
+                      <li>• Sleep deprivation effects</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="p-4 bg-indigo-500/10 rounded-xl border border-indigo-400/20">
+                    <h4 className="font-semibold text-indigo-300 mb-3">Sleep Optimization Strategies</h4>
+                    <ul className="text-gray-300 text-sm space-y-2">
+                      <li>• Sleep hygiene best practices</li>
+                      <li>• Environment optimization</li>
+                      <li>• Technology and sleep</li>
+                      <li>• Nutrition and sleep</li>
+                      <li>• Exercise timing effects</li>
+                      <li>• Stress management techniques</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl border border-blue-400/20">
+                  <h4 className="font-semibold text-blue-300 mb-3">Common Sleep Topics</h4>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="p-3 bg-blue-600/10 rounded-lg">
+                      <h5 className="font-semibold text-blue-200 mb-2 text-sm">Sleep Disorders</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Insomnia</li>
+                        <li>• Sleep apnea</li>
+                        <li>• Restless leg syndrome</li>
+                        <li>• Narcolepsy</li>
+                      </ul>
+                    </div>
+                    <div className="p-3 bg-indigo-600/10 rounded-lg">
+                      <h5 className="font-semibold text-indigo-200 mb-2 text-sm">Sleep & Health</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Cardiovascular health</li>
+                        <li>• Immune function</li>
+                        <li>• Mental health</li>
+                        <li>• Weight management</li>
+                      </ul>
+                    </div>
+                    <div className="p-3 bg-purple-600/10 rounded-lg">
+                      <h5 className="font-semibold text-purple-200 mb-2 text-sm">Special Populations</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Shift workers</li>
+                        <li>• Travelers</li>
+                        <li>• Athletes</li>
+                        <li>• Older adults</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Sleep Technology Guide */}
+            <Card className="bg-slate-800/50 backdrop-blur-sm border-green-500/20 shadow-2xl">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-white flex items-center gap-3">
+                  <Smartphone className="h-8 w-8 text-green-400" />
+                  Sleep Technology Guide
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="p-4 bg-green-500/10 rounded-xl border border-green-400/20">
+                    <h4 className="font-semibold text-green-300 mb-3">Sleep Tracking Devices</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Modern sleep tracking technology provides valuable insights into your sleep patterns. 
+                      Understanding how to use these tools effectively can help improve your sleep quality.
+                    </p>
+                    <div className="mt-3 p-3 bg-green-600/10 rounded-lg">
+                      <h5 className="font-semibold text-green-200 mb-2 text-sm">Types of Devices:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Wearable trackers</li>
+                        <li>• Bedside monitors</li>
+                        <li>• Smart mattresses</li>
+                        <li>• Mobile apps</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-emerald-500/10 rounded-xl border border-emerald-400/20">
+                    <h4 className="font-semibold text-emerald-300 mb-3">Data Interpretation</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Sleep tracking data can be complex. Learning to interpret this information helps you 
+                      make informed decisions about your sleep habits and environment.
+                    </p>
+                    <div className="mt-3 p-3 bg-emerald-600/10 rounded-lg">
+                      <h5 className="font-semibold text-emerald-200 mb-2 text-sm">Key Metrics:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Sleep efficiency</li>
+                        <li>• Deep sleep duration</li>
+                        <li>• REM sleep cycles</li>
+                        <li>• Sleep latency</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
         </div>
       </div>
     </div>

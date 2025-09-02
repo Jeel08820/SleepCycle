@@ -20,13 +20,6 @@ export function Navigation() {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-6">
-            <Link href="/">
-              <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-purple-500/20 transition-all">
-                <Home className="mr-2 h-4 w-4" />
-                Home
-              </Button>
-            </Link>
-            
             <Link href="/sleep-calculator">
               <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-purple-500/20 transition-all">
                 <Calculator className="mr-2 h-4 w-4" />

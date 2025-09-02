@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import TimePicker from "@/components/ui/time-picker";
-import SleepResultCard from "@/components/ui/sleep-result-card";
-import { FooterNavigation } from "@/components/ui/navigation";
-import { Moon, Sun, Bed, Calculator, Clock, Info, Lightbulb } from "lucide-react";
+import { Card, CardContent } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import TimePicker from "../components/ui/time-picker";
+import SleepResultCard from "../components/ui/sleep-result-card";
+import { FooterNavigation } from "../components/ui/navigation";
+import { Moon, Sun, Bed, Calculator, Clock, Info, Lightbulb, AlertCircle, Brain, Heart, Shield, Zap } from "lucide-react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
+import { apiRequest } from "../lib/queryClient";
 
 type CalculatorMode = 'wakeup' | 'bedtime';
 
@@ -501,6 +501,162 @@ export default function SleepCalculator() {
                   which can leave you feeling groggy and tired. This calculator adds 15 minutes for the average time it takes to fall asleep, 
                   ensuring you complete full cycles and wake up feeling refreshed.
                 </p>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Comprehensive Sleep Science Section */}
+        <section className="mt-16 max-w-6xl mx-auto px-4">
+          <Card className="bg-slate-800/50 backdrop-blur-sm border-blue-500/20 shadow-2xl">
+            <CardContent className="p-6 lg:p-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-4">
+                  Sleep Science & Research
+                </h2>
+                <p className="text-gray-300 text-lg">
+                  Evidence-based insights into sleep physiology and optimization
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Circadian Rhythm */}
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
+                    <Clock className="mr-3 text-blue-400" size={28} />
+                    Circadian Rhythm
+                  </h3>
+                  
+                  <div className="space-y-4">
+                    <p className="text-gray-300 leading-relaxed">
+                      Your circadian rhythm is a 24-hour internal clock that regulates sleep-wake cycles, hormone production, 
+                      body temperature, and other physiological processes. This rhythm is primarily controlled by the 
+                      suprachiasmatic nucleus (SCN) in your brain.
+                    </p>
+                    
+                    <div className="p-4 bg-blue-500/10 rounded-xl border border-blue-400/20">
+                      <h4 className="font-semibold text-blue-300 mb-2">Key Factors</h4>
+                      <ul className="text-gray-300 text-sm space-y-1">
+                        <li>• Light exposure (especially blue light)</li>
+                        <li>• Temperature fluctuations</li>
+                        <li>• Physical activity timing</li>
+                        <li>• Meal timing and composition</li>
+                        <li>• Social interactions and stress</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sleep Disorders */}
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
+                    <AlertCircle className="mr-3 text-red-400" size={28} />
+                    Common Sleep Disorders
+                  </h3>
+                  
+                  <div className="space-y-4">
+                    <div className="p-4 bg-red-500/10 rounded-xl border border-red-400/20">
+                      <h4 className="font-semibold text-red-300 mb-2">Insomnia</h4>
+                      <p className="text-gray-300 text-sm">Difficulty falling or staying asleep, affecting 10-30% of adults.</p>
+                    </div>
+                    
+                    <div className="p-4 bg-orange-500/10 rounded-xl border border-orange-400/20">
+                      <h4 className="font-semibold text-orange-300 mb-2">Sleep Apnea</h4>
+                      <p className="text-gray-300 text-sm">Breathing interruptions during sleep, affecting 3-7% of adults.</p>
+                    </div>
+                    
+                    <div className="p-4 bg-yellow-500/10 rounded-xl border border-yellow-400/20">
+                      <h4 className="font-semibold text-yellow-300 mb-2">Restless Leg Syndrome</h4>
+                      <p className="text-gray-300 text-sm">Uncomfortable sensations in legs, affecting 5-10% of adults.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Sleep Optimization Strategies */}
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="p-6 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-400/20">
+                  <h4 className="font-semibold text-purple-300 mb-3">Sleep Hygiene</h4>
+                  <ul className="text-gray-300 text-sm space-y-2">
+                    <li>• Consistent sleep schedule</li>
+                    <li>• Optimal bedroom environment</li>
+                    <li>• Pre-sleep relaxation routine</li>
+                    <li>• Limited caffeine and alcohol</li>
+                    <li>• Regular exercise (not before bed)</li>
+                  </ul>
+                </div>
+
+                <div className="p-6 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl border border-green-400/20">
+                  <h4 className="font-semibold text-green-300 mb-3">Nutrition & Sleep</h4>
+                  <ul className="text-gray-300 text-sm space-y-2">
+                    <li>• Avoid large meals before bed</li>
+                    <li>• Limit fluids in evening</li>
+                    <li>• Consider sleep-promoting foods</li>
+                    <li>• Magnesium and melatonin sources</li>
+                    <li>• Balanced blood sugar levels</li>
+                  </ul>
+                </div>
+
+                <div className="p-6 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-xl border border-blue-400/20">
+                  <h4 className="font-semibold text-blue-300 mb-3">Technology & Sleep</h4>
+                  <ul className="text-gray-300 text-sm space-y-2">
+                    <li>• Blue light filters</li>
+                    <li>• Screen time limits</li>
+                    <li>• Sleep tracking apps</li>
+                    <li>• White noise machines</li>
+                    <li>• Smart home integration</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Sleep Benefits Section */}
+        <section className="mt-16 max-w-6xl mx-auto px-4">
+          <Card className="bg-slate-800/50 backdrop-blur-sm border-green-500/20 shadow-2xl">
+            <CardContent className="p-6 lg:p-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent mb-4">
+                  Benefits of Quality Sleep
+                </h2>
+                <p className="text-gray-300 text-lg">
+                  How proper sleep cycles improve your health and well-being
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="p-6 bg-green-500/10 rounded-xl border border-green-400/20 text-center">
+                  <div className="text-green-400 mb-4">
+                    <Brain size={32} className="mx-auto" />
+                  </div>
+                  <h4 className="font-semibold text-green-300 mb-2">Cognitive Function</h4>
+                  <p className="text-gray-300 text-sm">Improved memory, focus, problem-solving, and creativity.</p>
+                </div>
+
+                <div className="p-6 bg-blue-500/10 rounded-xl border border-blue-400/20 text-center">
+                  <div className="text-blue-400 mb-4">
+                    <Heart size={32} className="mx-auto" />
+                  </div>
+                  <h4 className="font-semibold text-blue-300 mb-2">Heart Health</h4>
+                  <p className="text-gray-300 text-sm">Lower blood pressure, reduced heart disease risk.</p>
+                </div>
+
+                <div className="p-6 bg-purple-500/10 rounded-xl border border-purple-400/20 text-center">
+                  <div className="text-purple-400 mb-4">
+                    <Shield size={32} className="mx-auto" />
+                  </div>
+                  <h4 className="font-semibold text-purple-300 mb-2">Immune System</h4>
+                  <p className="text-gray-300 text-sm">Enhanced immune function and faster recovery.</p>
+                </div>
+
+                <div className="p-6 bg-yellow-500/10 rounded-xl border border-yellow-400/20 text-center">
+                  <div className="text-yellow-400 mb-4">
+                    <Zap size={32} className="mx-auto" />
+                  </div>
+                  <h4 className="font-semibold text-yellow-300 mb-2">Energy & Mood</h4>
+                  <p className="text-gray-300 text-sm">Better energy levels and emotional stability.</p>
+                </div>
               </div>
             </CardContent>
           </Card>

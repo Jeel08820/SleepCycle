@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FooterNavigation } from "@/components/ui/navigation";
-import { FileText, Shield, AlertTriangle, CheckCircle, XCircle, Info } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { FooterNavigation } from "../components/ui/navigation";
+import { FileText, Shield, AlertTriangle, CheckCircle, XCircle, Info, BookOpen } from "lucide-react";
 
 export default function TermsOfService() {
   return (
@@ -355,6 +355,133 @@ export default function TermsOfService() {
                     <strong>Effective Date:</strong> December 2024<br />
                     <strong>Last Updated:</strong> December 2024
                   </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Sleep Education & Legal Resources */}
+            <Card className="bg-slate-800/50 backdrop-blur-sm border-purple-500/20 shadow-2xl">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-white flex items-center gap-3">
+                  <BookOpen className="h-8 w-8 text-purple-400" />
+                  Sleep Education & Legal Resources
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <p className="text-gray-300 leading-relaxed">
+                  Understanding your rights and responsibilities when using sleep optimization tools is important. 
+                  This section provides educational resources about sleep health, legal considerations, and how to 
+                  make informed decisions about your sleep technology usage.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="p-4 bg-purple-500/10 rounded-xl border border-purple-400/20">
+                    <h4 className="font-semibold text-purple-300 mb-3">Sleep Health Education</h4>
+                    <ul className="text-gray-300 text-sm space-y-2">
+                      <li>• Understanding sleep cycles</li>
+                      <li>• Sleep hygiene best practices</li>
+                      <li>• Common sleep disorders</li>
+                      <li>• Sleep optimization strategies</li>
+                      <li>• Technology and sleep interaction</li>
+                      <li>• Professional sleep consultation</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="p-4 bg-indigo-500/10 rounded-xl border border-indigo-400/20">
+                    <h4 className="font-semibold text-indigo-300 mb-3">Legal Considerations</h4>
+                    <ul className="text-gray-300 text-sm space-y-2">
+                      <li>• User rights and protections</li>
+                      <li>• Data privacy regulations</li>
+                      <li>• Service terms understanding</li>
+                      <li>• Dispute resolution processes</li>
+                      <li>• Consumer protection laws</li>
+                      <li>• International legal compliance</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-xl border border-purple-400/20">
+                  <h4 className="font-semibold text-purple-300 mb-3">Making Informed Decisions</h4>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                    When using sleep optimization tools and services, it's important to understand both the benefits 
+                    and the terms of use. This knowledge helps you make informed decisions about your sleep health journey.
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="p-3 bg-purple-600/10 rounded-lg">
+                      <h5 className="font-semibold text-purple-200 mb-2 text-sm">Before Using Services</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Read terms carefully</li>
+                        <li>• Understand data collection</li>
+                        <li>• Review privacy policies</li>
+                        <li>• Check user reviews</li>
+                      </ul>
+                    </div>
+                    <div className="p-3 bg-indigo-600/10 rounded-lg">
+                      <h5 className="font-semibold text-indigo-200 mb-2 text-sm">During Usage</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Monitor data sharing</li>
+                        <li>• Update privacy settings</li>
+                        <li>• Report issues promptly</li>
+                        <li>• Keep records of concerns</li>
+                      </ul>
+                    </div>
+                    <div className="p-3 bg-blue-600/10 rounded-lg">
+                      <h5 className="font-semibold text-blue-200 mb-2 text-sm">If Issues Arise</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Contact support first</li>
+                        <li>• Document all interactions</li>
+                        <li>• Know your rights</li>
+                        <li>• Seek legal advice if needed</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Consumer Rights & Protections */}
+            <Card className="bg-slate-800/50 backdrop-blur-sm border-green-500/20 shadow-2xl">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-white flex items-center gap-3">
+                  <Shield className="h-8 w-8 text-green-400" />
+                  Consumer Rights & Protections
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="p-4 bg-green-500/10 rounded-xl border border-green-400/20">
+                    <h4 className="font-semibold text-green-300 mb-3">Your Rights as a User</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Understanding your rights helps ensure you receive fair treatment and proper service. 
+                      These rights are protected by various consumer protection laws and regulations.
+                    </p>
+                    <div className="mt-3 p-3 bg-green-600/10 rounded-lg">
+                      <h5 className="font-semibold text-green-200 mb-2 text-sm">Key Rights:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Right to clear information</li>
+                        <li>• Right to privacy protection</li>
+                        <li>• Right to fair treatment</li>
+                        <li>• Right to dispute resolution</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-emerald-500/10 rounded-xl border border-emerald-400/20">
+                    <h4 className="font-semibold text-emerald-300 mb-3">Protection Mechanisms</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Various mechanisms exist to protect consumers in the digital space. 
+                      Understanding these protections helps you navigate service relationships confidently.
+                    </p>
+                    <div className="mt-3 p-3 bg-emerald-600/10 rounded-lg">
+                      <h5 className="font-semibold text-emerald-200 mb-2 text-sm">Protections Include:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Data protection regulations</li>
+                        <li>• Consumer protection laws</li>
+                        <li>• Industry standards</li>
+                        <li>• User advocacy groups</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>

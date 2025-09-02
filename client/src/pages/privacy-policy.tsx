@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FooterNavigation } from "@/components/ui/navigation";
-import { Shield, Lock, Eye, Database, Cookie, Settings } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { FooterNavigation } from "../components/ui/navigation";
+import { Shield, Lock, Eye, Database, Cookie, Settings, Smartphone } from "lucide-react";
 
 export default function PrivacyPolicy() {
   return (
@@ -270,6 +270,132 @@ export default function PrivacyPolicy() {
                   <p className="text-purple-300 text-sm">
                     <strong>Last Updated:</strong> December 2024
                   </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Sleep Privacy & Security Education */}
+            <Card className="bg-slate-800/50 backdrop-blur-sm border-blue-500/20 shadow-2xl">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-white flex items-center gap-3">
+                  <Shield className="h-8 w-8 text-blue-400" />
+                  Sleep Privacy & Security Best Practices
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <p className="text-gray-300 leading-relaxed">
+                  Protecting your sleep data and privacy is crucial in today's digital world. Understanding how to safeguard 
+                  your personal information while using sleep tracking and optimization tools helps ensure both security and better sleep.
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="p-4 bg-blue-500/10 rounded-xl border border-blue-400/20">
+                    <h4 className="font-semibold text-blue-300 mb-3">Digital Privacy Protection</h4>
+                    <ul className="text-gray-300 text-sm space-y-2">
+                      <li>• Use strong, unique passwords</li>
+                      <li>• Enable two-factor authentication</li>
+                      <li>• Regularly review app permissions</li>
+                      <li>• Keep software updated</li>
+                      <li>• Use VPN for public networks</li>
+                      <li>• Monitor account activity</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="p-4 bg-indigo-500/10 rounded-xl border border-indigo-400/20">
+                    <h4 className="font-semibold text-indigo-300 mb-3">Sleep Data Security</h4>
+                    <ul className="text-gray-300 text-sm space-y-2">
+                      <li>• Choose reputable sleep apps</li>
+                      <li>• Review privacy policies carefully</li>
+                      <li>• Limit data sharing permissions</li>
+                      <li>• Use local storage when possible</li>
+                      <li>• Regular data backups</li>
+                      <li>• Secure device access</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl border border-blue-400/20">
+                  <h4 className="font-semibold text-blue-300 mb-3">Understanding Data Collection</h4>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                    Sleep tracking apps and devices collect various types of data to provide personalized insights. 
+                    Understanding what data is collected and how it's used helps you make informed decisions about your privacy.
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="p-3 bg-blue-600/10 rounded-lg">
+                      <h5 className="font-semibold text-blue-200 mb-2 text-sm">Personal Data</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Sleep duration and timing</li>
+                        <li>• Sleep quality metrics</li>
+                        <li>• Bedtime and wake time</li>
+                        <li>• Sleep environment data</li>
+                      </ul>
+                    </div>
+                    <div className="p-3 bg-indigo-600/10 rounded-lg">
+                      <h5 className="font-semibold text-indigo-200 mb-2 text-sm">Device Data</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Movement and activity</li>
+                        <li>• Heart rate patterns</li>
+                        <li>• Breathing patterns</li>
+                        <li>• Environmental sensors</li>
+                      </ul>
+                    </div>
+                    <div className="p-3 bg-purple-600/10 rounded-lg">
+                      <h5 className="font-semibold text-purple-200 mb-2 text-sm">Usage Data</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• App interactions</li>
+                        <li>• Feature usage patterns</li>
+                        <li>• Settings preferences</li>
+                        <li>• Performance metrics</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Sleep Technology Privacy */}
+            <Card className="bg-slate-800/50 backdrop-blur-sm border-green-500/20 shadow-2xl">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-white flex items-center gap-3">
+                  <Smartphone className="h-8 w-8 text-green-400" />
+                  Sleep Technology & Privacy
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="p-4 bg-green-500/10 rounded-xl border border-green-400/20">
+                    <h4 className="font-semibold text-green-300 mb-3">Smart Devices & Privacy</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Smart sleep devices, including wearables and bedside monitors, collect sensitive health data. 
+                      Understanding their privacy implications helps you make informed choices about which devices to use.
+                    </p>
+                    <div className="mt-3 p-3 bg-green-600/10 rounded-lg">
+                      <h5 className="font-semibold text-green-200 mb-2 text-sm">Privacy Considerations:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Data encryption standards</li>
+                        <li>• Cloud storage security</li>
+                        <li>• Third-party data sharing</li>
+                        <li>• Local vs. cloud processing</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-emerald-500/10 rounded-xl border border-emerald-400/20">
+                    <h4 className="font-semibold text-emerald-300 mb-3">App Privacy Settings</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Most sleep tracking apps offer various privacy settings and controls. 
+                      Taking time to configure these settings helps protect your personal information.
+                    </p>
+                    <div className="mt-3 p-3 bg-emerald-600/10 rounded-lg">
+                      <h5 className="font-semibold text-emerald-200 mb-2 text-sm">Key Settings:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Data sharing permissions</li>
+                        <li>• Analytics and tracking</li>
+                        <li>• Third-party integrations</li>
+                        <li>• Data retention policies</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>

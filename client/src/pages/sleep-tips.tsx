@@ -1,7 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { FooterNavigation } from "@/components/ui/navigation";
-import { Moon, Clock, Home, Lightbulb, Calendar, Thermometer } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { FooterNavigation } from "../components/ui/navigation";
+import { Moon, Clock, Home, Lightbulb, Calendar, Thermometer, AlertTriangle, Zap } from "lucide-react";
 
 interface SleepTip {
   id: number;
@@ -174,7 +174,7 @@ export default function SleepTips() {
           </div>
 
           {/* Additional Sleep Information */}
-          <div className="space-y-8">
+          <div className="mt-16 space-y-8">
             <Card className="bg-gradient-to-br from-slate-800/40 to-purple-900/20 backdrop-blur-sm border border-purple-400/20">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent flex items-center gap-3">
@@ -238,6 +238,208 @@ export default function SleepTips() {
                       <li>• Get morning sunlight</li>
                       <li>• Avoid hitting snooze</li>
                       <li>• Stay hydrated</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Advanced Sleep Science Section */}
+            <Card className="bg-gradient-to-br from-slate-800/40 to-blue-900/20 backdrop-blur-sm border border-blue-400/20">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent flex items-center gap-3">
+                  <Clock className="h-8 w-8 text-blue-400" />
+                  Advanced Sleep Science
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="p-4 bg-blue-500/10 rounded-xl border border-blue-400/20">
+                    <h4 className="font-semibold text-blue-300 mb-3">Sleep Architecture</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Sleep architecture refers to the structure and organization of sleep cycles throughout the night. 
+                      Understanding this pattern helps optimize sleep quality and timing for better rest and recovery.
+                    </p>
+                    <div className="mt-3 p-3 bg-blue-600/10 rounded-lg">
+                      <h5 className="font-semibold text-blue-200 mb-2 text-sm">Key Components:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Non-REM sleep (N1, N2, N3 stages)</li>
+                        <li>• REM sleep for cognitive processing</li>
+                        <li>• Cycle duration variations (80-110 minutes)</li>
+                        <li>• Sleep efficiency and continuity</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-indigo-500/10 rounded-xl border border-indigo-400/20">
+                    <h4 className="font-semibold text-indigo-300 mb-3">Sleep Hormones</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Various hormones regulate sleep-wake cycles, including melatonin, cortisol, growth hormone, 
+                      and leptin. Understanding their roles helps optimize sleep timing and quality.
+                    </p>
+                    <div className="mt-3 p-3 bg-indigo-600/10 rounded-lg">
+                      <h5 className="font-semibold text-indigo-200 mb-2 text-sm">Key Hormones:</h5>
+                      <ul className="text-xs text-gray-300 space-y-1">
+                        <li>• Melatonin: Sleep initiation</li>
+                        <li>• Cortisol: Wakefulness and stress</li>
+                        <li>• Growth hormone: Tissue repair</li>
+                        <li>• Leptin: Appetite regulation</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl border border-cyan-400/20">
+                  <h4 className="font-semibold text-cyan-300 mb-3">Sleep Research Findings</h4>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-3">
+                    Recent sleep research has revealed fascinating insights into how sleep affects our health, 
+                    cognition, and overall well-being. These findings support the importance of proper sleep cycles.
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="p-3 bg-cyan-600/10 rounded-lg">
+                      <h5 className="font-semibold text-cyan-200 mb-2 text-xs">Memory Consolidation</h5>
+                      <p className="text-xs text-gray-300">REM sleep plays crucial role in processing and storing memories.</p>
+                    </div>
+                    <div className="p-3 bg-blue-600/10 rounded-lg">
+                      <h5 className="font-semibold text-blue-200 mb-2 text-xs">Immune Function</h5>
+                      <p className="text-xs text-gray-300">Deep sleep enhances immune system response and recovery.</p>
+                    </div>
+                    <div className="p-3 bg-indigo-600/10 rounded-lg">
+                      <h5 className="font-semibold text-indigo-200 mb-2 text-xs">Emotional Regulation</h5>
+                      <p className="text-xs text-gray-300">Sleep helps process emotions and maintain mental health.</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Sleep Disorders & Solutions */}
+            <Card className="bg-gradient-to-br from-slate-800/40 to-red-900/20 backdrop-blur-sm border border-red-400/20">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent flex items-center gap-3">
+                  <AlertTriangle className="h-8 w-8 text-red-400" />
+                  Sleep Disorders & Solutions
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <div className="p-4 bg-red-500/10 rounded-xl border border-red-400/20">
+                      <h4 className="font-semibold text-red-300 mb-2">Insomnia</h4>
+                      <p className="text-gray-300 text-sm mb-3">
+                        Difficulty falling or staying asleep affects 10-30% of adults and can significantly impact quality of life.
+                      </p>
+                      <div className="p-3 bg-red-600/10 rounded-lg">
+                        <h5 className="font-semibold text-red-200 mb-2 text-sm">Solutions:</h5>
+                        <ul className="text-xs text-gray-300 space-y-1">
+                          <li>• Cognitive Behavioral Therapy (CBT)</li>
+                          <li>• Sleep restriction therapy</li>
+                          <li>• Relaxation techniques</li>
+                          <li>• Improved sleep hygiene</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="p-4 bg-orange-500/10 rounded-xl border border-orange-400/20">
+                      <h4 className="font-semibold text-orange-300 mb-2">Sleep Apnea</h4>
+                      <p className="text-gray-300 text-sm mb-3">
+                        Breathing interruptions during sleep can lead to serious health complications if left untreated.
+                      </p>
+                      <div className="p-3 bg-orange-600/10 rounded-lg">
+                        <h5 className="font-semibold text-orange-200 mb-2 text-sm">Solutions:</h5>
+                        <ul className="text-xs text-gray-300 space-y-1">
+                          <li>• CPAP therapy</li>
+                          <li>• Positional therapy</li>
+                          <li>• Weight management</li>
+                          <li>• Medical consultation</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="p-4 bg-yellow-500/10 rounded-xl border border-yellow-400/20">
+                      <h4 className="font-semibold text-yellow-300 mb-2">Restless Leg Syndrome</h4>
+                      <p className="text-gray-300 text-sm mb-3">
+                        Uncomfortable sensations in legs can make it difficult to fall asleep and stay asleep.
+                      </p>
+                      <div className="p-3 bg-yellow-600/10 rounded-lg">
+                        <h5 className="font-semibold text-yellow-200 mb-2 text-sm">Solutions:</h5>
+                        <ul className="text-xs text-gray-300 space-y-1">
+                          <li>• Iron supplementation</li>
+                          <li>• Regular exercise</li>
+                          <li>• Leg stretching routines</li>
+                          <li>• Medication options</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="p-4 bg-purple-500/10 rounded-xl border border-purple-400/20">
+                      <h4 className="font-semibold text-purple-300 mb-2">Circadian Rhythm Disorders</h4>
+                      <p className="text-gray-300 text-sm mb-3">
+                        Misalignment between internal clock and external environment can cause sleep timing issues.
+                      </p>
+                      <div className="p-3 bg-purple-600/10 rounded-lg">
+                        <h5 className="font-semibold text-purple-200 mb-2 text-sm">Solutions:</h5>
+                        <ul className="text-xs text-gray-300 space-y-1">
+                          <li>• Light therapy</li>
+                          <li>• Gradual schedule adjustment</li>
+                          <li>• Melatonin supplementation</li>
+                          <li>• Consistent routines</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Sleep Technology & Tools */}
+            <Card className="bg-gradient-to-br from-slate-800/40 to-cyan-900/20 backdrop-blur-sm border border-cyan-400/20">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent flex items-center gap-3">
+                  <Zap className="h-8 w-8 text-cyan-400" />
+                  Sleep Technology & Tools
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="p-4 bg-cyan-500/10 rounded-xl border border-cyan-400/20">
+                    <h4 className="font-semibold text-cyan-300 mb-3">Sleep Tracking</h4>
+                    <p className="text-gray-300 text-sm mb-3">
+                      Modern devices and apps can monitor sleep patterns, providing insights into sleep quality and optimization opportunities.
+                    </p>
+                    <ul className="text-xs text-gray-300 space-y-1">
+                      <li>• Wearable devices</li>
+                      <li>• Smartphone apps</li>
+                      <li>• Bedside monitors</li>
+                      <li>• Sleep lab analysis</li>
+                    </ul>
+                  </div>
+
+                  <div className="p-4 bg-blue-500/10 rounded-xl border border-blue-400/20">
+                    <h4 className="font-semibold text-blue-300 mb-3">Sleep Environment</h4>
+                    <p className="text-gray-300 text-sm mb-3">
+                      Technology can help create optimal sleep conditions through automation and monitoring.
+                    </p>
+                    <ul className="text-xs text-gray-300 space-y-1">
+                      <li>• Smart thermostats</li>
+                      <li>• Automated lighting</li>
+                      <li>• White noise machines</li>
+                      <li>• Air purifiers</li>
+                    </ul>
+                  </div>
+
+                  <div className="p-4 bg-indigo-500/10 rounded-xl border border-indigo-400/20">
+                    <h4 className="font-semibold text-indigo-300 mb-3">Sleep Optimization</h4>
+                    <p className="text-gray-300 text-sm mb-3">
+                      Advanced tools can help optimize sleep timing and improve overall sleep quality.
+                    </p>
+                    <ul className="text-xs text-gray-300 space-y-1">
+                      <li>• Sleep calculators</li>
+                      <li>• Meditation apps</li>
+                      <li>• Biofeedback devices</li>
+                      <li>• Sleep coaching</li>
                     </ul>
                   </div>
                 </div>

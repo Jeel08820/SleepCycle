@@ -1,15 +1,15 @@
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { Navigation } from "@/components/ui/navigation";
-import SleepCalculator from "@/pages/sleep-calculator";
-import NotFound from "@/pages/not-found";
-import SleepTips from "@/pages/sleep-tips";
-import PrivacyPolicy from "@/pages/privacy-policy";
-import TermsOfService from "@/pages/terms-of-service";
-import About from "@/pages/about";
+import { Toaster } from "./components/ui/toaster";
+import { TooltipProvider } from "./components/ui/tooltip";
+import { Navigation } from "./components/ui/navigation";
+import SleepCalculator from "./pages/sleep-calculator";
+import NotFound from "./pages/not-found";
+import SleepTips from "./pages/sleep-tips";
+import PrivacyPolicy from "./pages/privacy-policy";
+import TermsOfService from "./pages/terms-of-service";
+import About from "./pages/about";
 
 function Router() {
   return (
